@@ -140,11 +140,37 @@ footer{background:#101010}
 footer .footer-wordmark{display:inline-grid;margin-bottom:20px}
 .studio-archive .archive-action{font-size:calc(10px + 2pt);font-weight:700}@media(max-width:680px){.studio-archive .archive-action{font-size:calc(9px + 2pt)}}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="catalogue-theme.css?v=20261007-4"></head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="catalogue-theme.css?v=20261007-4"><style>
+/* Customer reviews: three cards on desktop, native swipe on mobile. */
+.wawo-reviews{background:#fff;color:#111;padding:48px 0 42px;border-bottom:1px solid #dedede}
+.wawo-reviews-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+.wawo-reviews .eyebrow{color:#c91425;font-size:10px;letter-spacing:.18em;margin:0 0 9px}
+.wawo-reviews h2{font-family:inherit;font-size:clamp(26px,3.2vw,42px);line-height:1.05;letter-spacing:-.035em;margin:0;font-weight:800}
+.wawo-reviews-head>p{font-size:13px;color:#666;margin:0;max-width:250px}
+.wawo-review-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.wawo-review{margin:0;display:flex;flex-direction:column;background:#fff;border:1px solid #ddd;border-top:3px solid #c91425;padding:24px;min-width:0}
+.wawo-review-mark{font-size:50px;line-height:.8;color:#c91425;font-family:Georgia,serif;margin:0 0 16px}
+.wawo-review blockquote{margin:0 0 24px;font-size:17px;line-height:1.55;font-weight:500;flex:1}
+.wawo-review figcaption{border-top:1px solid #eee;padding-top:14px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#666}
+.wawo-review figcaption strong{color:#111;display:block;font-size:12px;margin-bottom:4px}
+.wawo-review-controls{display:none}
+.wawo-review-controls button{background:#fff;border:1px solid #aaa;color:#111;width:42px;height:42px;font-size:20px;cursor:pointer}
+.wawo-review-controls button:disabled{opacity:.3;cursor:default}
+.wawo-reviews :focus-visible{outline:2px solid #c91425;outline-offset:4px}
+@media(max-width:760px){.wawo-reviews{padding:34px 0 28px}.wawo-reviews-head{display:block;margin-bottom:20px}.wawo-reviews-head>p{margin-top:12px;max-width:none}.wawo-review-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#c91425 #eee;padding-bottom:12px}.wawo-review{flex:0 0 88%;scroll-snap-align:start;padding:22px}.wawo-review blockquote{font-size:17px}.wawo-review-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}.wawo-review-controls span{font-size:11px;color:#555}.wawo-review-buttons{display:flex;gap:8px}}
+</style></head>
 <body>
 <header class="header"><div class="container nav"><a class="wordmark" href="#top" aria-label="WAWO Brand House home"><strong>WAWO</strong><span>BRAND HOUSE</span></a><nav class="nav-links" id="primaryNav" aria-label="Primary"><a href="#products">Collections</a><a href="#work">Production gallery</a><a href="#process">Our process</a><a href="#instagram">Instagram</a></nav><div class="nav-actions"><button class="btn menu" id="menuBtn" aria-expanded="false" aria-controls="primaryNav">Menu</button><button class="btn btn-red" id="quoteTop">Get a quote</button></div></div></header>
 <main id="top">
 <section class="catalogue-hero"><div class="container catalogue-hero-grid"><div class="catalogue-hero-copy"><div class="edition">THE 2026 / 2027 COLLECTION</div><h1>THE<br><span>WAWO</span><br>COLLECTION.</h1><div class="red-rule"></div><p>Branding. Printing. Merchandise.<br>Corporate gifts.</p><div class="hero-actions"><a class="btn btn-dark" href="catalogue.html">Flip through our catalogue</a><a class="btn btn-red" href="assets/downloads/WAWO-Brand-House-Catalogue-2026-2027.pdf" download="WAWO-Brand-House-Catalogue-2026-2027.pdf">Download our catalogue</a><button class="btn btn-outline" id="quoteHero">Build my brand pack</button></div></div><div class="catalogue-hero-image"><img src="assets/catalogue/hero.jpg" alt="Black executive gift set from the WAWO catalogue" fetchpriority="high" width="832" height="963"></div></div><div class="container hero-foot"><span>YOUR LOGO CAN GO FURTHER.</span><a href="#products">DISCOVER WAWO ↓</a></div></section>
+<section class="wawo-reviews" id="reviews" aria-labelledby="reviews-title"><div class="container">
+<div class="wawo-reviews-head"><div><p class="eyebrow">FROM OUR CUSTOMERS</p><h2 id="reviews-title">THEIR WORDS. OUR WHY.</h2></div><p>A few words from the people we create for.</p></div>
+<div class="wawo-review-track" id="reviewTrack" tabindex="0" role="region" aria-label="Customer reviews. Swipe or use the arrow buttons on mobile.">
+<figure class="wawo-review"><div class="wawo-review-mark" aria-hidden="true">“</div><blockquote>“Your customer service is great. I am definitely coming back.”</blockquote><figcaption><strong>Liana Hair</strong>Customer feedback</figcaption></figure>
+<figure class="wawo-review"><div class="wawo-review-mark" aria-hidden="true">“</div><blockquote>“Received my package yesterday. And they’re perfect. Great quality too — thank you for delivering so excellently.”</blockquote><figcaption><strong>WAWO customer</strong>Customer feedback</figcaption></figure>
+<figure class="wawo-review"><div class="wawo-review-mark" aria-hidden="true">“</div><blockquote>“Have received my package. Am so inlove with them especially the colour are beautiful.”</blockquote><figcaption><strong>WAWO customer</strong>Customer feedback</figcaption></figure>
+</div><div class="wawo-review-controls"><span>Swipe to explore · <span id="reviewPosition" aria-live="polite">1 / 3</span></span><div class="wawo-review-buttons"><button type="button" id="reviewPrev" aria-label="Previous review" aria-controls="reviewTrack" disabled>←</button><button type="button" id="reviewNext" aria-label="Next review" aria-controls="reviewTrack">→</button></div></div>
+</div></section>
 <section class="collections-section" id="products"><div class="container"><div class="collection-heading"><div><p class="eyebrow">01 / THE COLLECTIONS</p><h2>CHOOSE YOUR<br><span>BRAND EXPRESSION.</span></h2></div><p>From the gift in their hands to the space around them. Explore what we can brand.</p></div><div class="collection-grid"><a class="collection-card" href="collections.html?category=gifts"><div class="collection-photo"><img src="assets/catalogue/gifts.jpg" alt="Corporate Gifts catalogue preview" loading="lazy" width="800" height="600"><span class="collection-number">01</span></div><div class="collection-info"><h3>Corporate Gifts</h3><p>Gifts people actually want to keep.</p><span class="collection-link">Explore collection →</span></div></a>
 <a class="collection-card" href="collections.html?category=merchandise"><div class="collection-photo"><img src="assets/catalogue/merchandise.jpg" alt="Apparel & Merchandise catalogue preview" loading="lazy" width="800" height="600"><span class="collection-number">02</span></div><div class="collection-info"><h3>Apparel & Merchandise</h3><p>Your brand. Worn, carried, remembered.</p><span class="collection-link">Explore collection →</span></div></a>
 <a class="collection-card" href="collections.html?category=stationery"><div class="collection-photo"><img src="assets/catalogue/stationery.jpg" alt="Notebooks & Stationery catalogue preview" loading="lazy" width="800" height="600"><span class="collection-number">03</span></div><div class="collection-info"><h3>Notebooks & Stationery</h3><p>Ideas, branded.</p><span class="collection-link">Explore collection →</span></div></a>
@@ -303,6 +329,13 @@ document.getElementById('quoteForm').addEventListener('submit',e=>{e.preventDefa
 'Please review this enquiry and provide the appropriate quote and production recommendations.'
 ].join('\n');const phone=String(CONFIG.whatsappNumber||CONFIG.whatsapp||'').replace(/\\D/g,'');const link=phone?`https://wa.me/${phone}?text=${encodeURIComponent(message)}`:String(CONFIG.whatsappLink||'').trim();if(!link){alert('Wawo WhatsApp is not configured yet. Add the WhatsApp number or link in config.js before launch.');return}window.open(link,'_blank');closeQuote();resetQuote()});const igFallbackBtn=document.getElementById('igFallbackBtn');if(igFallbackBtn)igFallbackBtn.addEventListener('click',()=>window.open(CONFIG.instagramUrl,'_blank'));
 const menuBtn=document.getElementById('menuBtn');if(menuBtn){const nav=document.querySelector('.nav-links');menuBtn.addEventListener('click',()=>{const isOpen=nav.classList.toggle('is-open');menuBtn.setAttribute('aria-expanded',String(isOpen));});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');menuBtn.setAttribute('aria-expanded','false');}));}
+</script>
+<script>
+(()=>{const track=document.getElementById('reviewTrack'),prev=document.getElementById('reviewPrev'),next=document.getElementById('reviewNext'),position=document.getElementById('reviewPosition');
+const cards=Array.from(track.children);let current=0;
+function update(){const left=track.getBoundingClientRect().left;current=cards.reduce((best,card,i)=>Math.abs(card.getBoundingClientRect().left-left)<Math.abs(cards[best].getBoundingClientRect().left-left)?i:best,0);position.textContent=`${current+1} / ${cards.length}`;prev.disabled=current===0;next.disabled=current===cards.length-1;}
+function move(delta){const target=cards[Math.max(0,Math.min(cards.length-1,current+delta))];track.scrollBy({left:target.getBoundingClientRect().left-track.getBoundingClientRect().left,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
+prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));track.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);track.addEventListener('keydown',event=>{if(matchMedia('(max-width:760px)').matches&&(event.key==='ArrowRight'||event.key==='ArrowLeft')){event.preventDefault();move(event.key==='ArrowRight'?1:-1);}});update();})();
 </script>
 </body>
 </html>
